@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model => mode</title>
+    <style>
+        article{
+            border: 1px solid red;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <article id="pastArticle">
+                <h1 id="author">author - 1</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus pariatur facere voluptatem cum reprehenderit magnam modi architecto laudantium nihil! Nihil impedit dolor, excepturi voluptatem nesciunt quaerat repellat voluptate molestiae quos optio accusantium, placeat alias. At tempore consequatur libero repudiandae? Quam perferendis magni beatae porro dignissimos minima odit consequuntur eos magnam.</p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h1 id="author">author - 1</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus pariatur facere voluptatem cum reprehenderit magnam modi architecto laudantium nihil! Nihil impedit dolor, excepturi voluptatem nesciunt quaerat repellat voluptate molestiae quos optio accusantium, placeat alias. At tempore consequatur libero repudiandae? Quam perferendis magni beatae porro dignissimos minima odit consequuntur eos magnam.</p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h1 id="author">author - 1</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus pariatur facere voluptatem cum reprehenderit magnam modi architecto laudantium nihil! Nihil impedit dolor, excepturi voluptatem nesciunt quaerat repellat voluptate molestiae quos optio accusantium, placeat alias. At tempore consequatur libero repudiandae? Quam perferendis magni beatae porro dignissimos minima odit consequuntur eos magnam.</p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <ul id="ulSpeciall">
+                    <li>home</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <script>
+        var add = document.getElementById("pastArticle");
+        var newelements = document.createElement("p");
+        newelements.innerHTML = "this is added by js code.......";
+        add.appendChild(newelements);
+
+
+        var liAdd = document.getElementById("ulSpeciall");
+        var newLi = document.createElement("li");
+        newLi.innerHTML = "about";
+        liAdd.appendChild(newLi);
+    </script>
+</body>
+</html>
