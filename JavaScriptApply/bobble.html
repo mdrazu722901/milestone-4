@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1>My List</h1>
+        <ul id="mylist">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Ipsum, nobis nemo?</li>
+            <li class="item">Ipsa, enim quidem.</li>
+            <li class="item">Suscipit, deserunt neque.</li>
+            <li class="item">Ex, necessitatibus repudiandae!</li>
+        </ul>
+        <button id="addNew">add New Items</button>
+    </div>
+    <script>
+        // var capture = document.getElementsByClassName("item")
+        // for (let i = 0; i < capture.length; i++) {
+        //     const element = capture[i];
+        //     element.addEventListener("click", function (event) {
+        //         event.target.parentNode.removeChild(event.target);
+
+        //     })
+        // };
+       document.getElementById("addNew").addEventListener("click", function(event){
+        var liParent = document.getElementById("mylist");
+        var NewLi = document.createElement("li");
+        NewLi.innerText = "this is new Item";
+        liParent.appendChild(NewLi);
+       })
+       document.getElementById("mylist").addEventListener("click", function(event){
+        event.target.parentNode.removeChild(event.target);
+       })
+    </script>
+</body>
+
+</html>
