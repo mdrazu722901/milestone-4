@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bobble Practice</title>
+</head>
+<body>
+    <section id="section">
+        <h1 id="header">My website Todo list</h1>
+        <ul id="ul-container">
+            <li id="item">Home</li>
+            <li>services</li>
+            <li>Accounts</li>
+            <li>Details info</li>
+        </ul>
+    </section>
+    <script>
+        // click capture and click event Bobble  korteche a concept============
+          document.getElementById("item").addEventListener('click', function(event){
+            console.log("click li item")
+            event.stopPropagation();
+            //event.stopImmediatePropagation() ata muloto tar paser onno guloka o of kore diba
+          })
+          document.getElementById("ul-container").addEventListener('click', function(event){
+            console.log("ul-container click")
+          })
+          document.getElementById("section").addEventListener('click', function(event){
+            console.log("section li item")
+          })
+    </script>
+</body>
+</html>
